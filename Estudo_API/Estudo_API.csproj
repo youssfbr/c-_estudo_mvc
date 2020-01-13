@@ -14,5 +14,9 @@
     <PackageReference Include="SwashBuckle.AspNetCore.MicrosoftExtensions" Version="0.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EstudoMVC\EstudoMVC.csproj" />
+  </ItemGroup>
+
 
 </Project>
