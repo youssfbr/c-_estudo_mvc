@@ -31,7 +31,7 @@ namespace Estudo_API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Produto>> GetProduto(int id)
         {
-            var produto = await _context.Produtos.FindAsync(id);
+            var produto = await _context.Produtos.Include("Categoria").FirstOrDefaultAsync(x => x.Id == id); // FindAsync(id);
 
             if (produto == null)
             {
